@@ -12,7 +12,7 @@ if(!is_admin()
  && strpos($_SERVER['REQUEST_URI'], 'wp-login.php') === false 
  && strpos($_SERVER['REQUEST_URI'], 'wp-signup.php') === false) { 
 
-   add_action('init', 'myplugin');
+   add_action('wp_head', 'myplugin');
 
  function myplugin() {
     $current_date = date('F j, Y (l)');
