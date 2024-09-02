@@ -8,10 +8,6 @@
  * Text Domain: My Plugin
  */
 
-if(!is_admin()
- && strpos($_SERVER['REQUEST_URI'], 'wp-login.php') === false 
- && strpos($_SERVER['REQUEST_URI'], 'wp-signup.php') === false) { 
-
    add_action('wp_head', 'myplugin');
 
  function myplugin() {
@@ -22,5 +18,4 @@ if(!is_admin()
     echo '</div>';
    }
 
-}
  ?>
